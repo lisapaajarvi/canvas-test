@@ -16,25 +16,28 @@ function main() {
 function draw() {
     const ctx = canvas.getContext("2d");
 
-    ctx.fillStyle = "green";
-    ctx.fillRect(100, 100, 20, 20)
-    ctx.strokeRect(100, 100, 100, 100)
-    ctx.fillRect(180, 180, 20, 20)
-    ctx.fillRect(140, 140, 20, 20)
+    //drawRectangles(ctx);
+    //drawTriangle(ctx);
+    //drawCircle(ctx);
+    drawSelfPortrait(ctx);
 
-    const centerX = window.innerWidth / 2;
-    const centerY = window.innerHeight / 2;
-    const width = 300;
-    const height = 300;
-    const x = centerX - (width / 2);
-    const y = centerY - (height / 2);
-
-    ctx.fillStyle = "blue";
-    ctx.fillRect(x, y, width, height)
-
-    drawTriangle(ctx);
-    drawCircle(ctx);
 }
+
+/**
+ * 
+ * @param {CanvasRenderingContext2D} ctx 
+ */
+function drawSelfPortrait(ctx) {
+    
+ctx.fillStyle = "pink";
+ctx.fillRect(400, 200, 240, 300)
+
+ctx.beginPath()
+ctx.moveTo(200, 200)
+
+
+}
+
 /**
  * 
  * @param {CanvasRenderingContext2D} ctx 
@@ -67,6 +70,28 @@ function drawCircle(ctx) {
 
     ctx.stroke();
     ctx.fill();
+}
+
+/**
+ * 
+ * @param {CanvasRenderingContext2D} ctx 
+ */
+function drawRectangles(ctx) {
+    ctx.fillStyle = "green";
+    ctx.fillRect(100, 100, 20, 20)
+    ctx.strokeRect(100, 100, 100, 100)
+    ctx.fillRect(180, 180, 20, 20)
+    ctx.fillRect(140, 140, 20, 20)
+
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+    const width = 300;
+    const height = 300;
+    const x = centerX - (width / 2);
+    const y = centerY - (height / 2);
+
+    ctx.fillStyle = "blue";
+    ctx.fillRect(x, y, width, height)
 }
 function addEventListeners() {
     window.addEventListener("resize", handleWindowResize);
