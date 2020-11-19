@@ -28,15 +28,75 @@ function draw() {
  * @param {CanvasRenderingContext2D} ctx 
  */
 function drawSelfPortrait(ctx) {
-    
+
+// face    
 ctx.fillStyle = "pink";
-ctx.fillRect(400, 200, 240, 300)
+ctx.fillRect(400, 200, 240, 240)
 
 ctx.beginPath()
-ctx.moveTo(200, 200)
+ctx.arc(520, 440, 120, 0, 3.14)    
+ctx.closePath();
 
+ctx.fill();
+
+//ctx.fillRect(500, 550, 40, 40)
+
+// eye whites
+
+ctx.fillStyle = "white";
+ctx.strokeStyle = "black";
+
+ctx.beginPath()
+ctx.arc(465, 370, 30, 3.5, 5.9)
+ctx.closePath()
+
+ctx.stroke();
+ctx.fill();
+
+ctx.beginPath()
+ctx.arc(575, 370, 28, 3.5, 5.9)
+ctx.closePath()
+
+ctx.stroke();
+ctx.fill();
+
+// pupils
+
+ctx.fillStyle = "black"
+ctx.strokeStyle = "teal"
+ctx.lineWidth = 10
+
+ctx.beginPath()
+ctx.arc(467, 350, 4, 0, 10)
+ctx.stroke();
+ctx.fill();
+
+ctx.beginPath()
+ctx.arc(577, 350, 4, 0, 10)
+ctx.stroke();
+ctx.fill();
+
+// mouth
+
+ctx.fillStyle = "red"
+ctx.strokeStyle = "black"
+ctx.lineWidth = 1
+ctx.beginPath()
+ctx.arc(520, 460, 50, 0.55, 2.6) 
+ctx.closePath()
+ctx.stroke();
+ctx.fill();
+
+// hair
+
+ctx.fillStyle = "rgb(199, 175, 103)"
+
+ctx.fillRect(380, 200, 280, 100)
+ctx.fillRect(380, 200, 30, 400)
+ctx.fillRect(630, 200, 30, 400)
 
 }
+
 
 /**
  * 
